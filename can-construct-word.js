@@ -1,9 +1,11 @@
 "use strict";
 
-
+/** takes a word and a string of letters, returns true/false based on if word can be made from letters */
 function canConstructWord(word, letters) {
     let counter = makeCounter(letters);
 
+
+//TODO if(!letter in counter)
     for(let letter of word){
         if(!counter[letter]){
             return false;
