@@ -4,6 +4,7 @@
 function averagePair(nums, targetAvg) {
     let left = 0;
     let right = nums.length - 1;
+    console.log(`left = ${left}, right = ${right}`)
 
     while (left < right) {
         let sum = nums[left] + nums[right];
@@ -13,7 +14,7 @@ function averagePair(nums, targetAvg) {
         } else if (avg > targetAvg) {
             right--;
         } else {
-            left--;
+            left++;
         }
     }
     return false;
